@@ -1,0 +1,211 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Assign Test</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <div class="site-background">
+        <div class="table-header-activated">
+            <a class="export-box">
+                <div class="export-popout"></div>
+            </a>
+        </div>
+        <div class="row row_1">
+                <a class="cell-status-box">
+                    <div class="status-popout"></div>
+                </a>
+                <a class="translator-box">
+                    <div class="assign-popout"></div>
+                </a>
+                <a class="cell-deadline-box">
+                    <div class="deadline-popout"></div>
+                </a>
+                <a class="cell-reviewer-box">
+                    <div class="reviewer-popout"></div>
+                </a>
+                <a class="cell-deadline-r-box">
+                    <div class="deadline-popout"></div>
+                </a>
+                <a class="cell-more-box">
+                    <div class="more-popout"></div>
+                </a>
+            <a class="checkbox"></a>
+            <div class="selected-state"></div>
+        </div>
+        <div class="row row_2">
+                <a class="cell-status-box">
+                    <div class="status-popout"></div>
+                </a>
+                <a class="translator-box">
+                    <div class="assign-popout"></div>
+                </a>
+                <a class="cell-deadline-box">
+                    <div class="deadline-popout"></div>
+                </a>
+                <a class="cell-reviewer-box">
+                    <div class="assign-popout"></div>
+                </a>
+                <a class="cell-deadline-r-box">
+                    <div class="deadline-popout"></div>
+                </a>
+                <a class="cell-more-box">
+                    <div class="more-popout"></div>
+                </a>
+            <a class="checkbox"></a>
+            <div class="selected-state"></div>
+        </div>
+        <div class="row row_3">
+                <a class="cell-status-box">
+                    <div class="status-popout"></div>
+                </a>
+                <a class="translator-box">
+                    <div class="assign-popout"></div>
+                </a>
+                <a class="cell-deadline-box">
+                    <div class="deadline-popout"></div>
+                </a>
+                <a class="cell-reviewer-box">
+                    <div class="assign-popout"></div>
+                </a>
+                <a class="cell-deadline-r-box">
+                    <div class="deadline-popout"></div>
+                </a>
+                <a class="cell-more-box">
+                    <div class="more-popout"></div>
+                </a>
+            <a class="checkbox"></a>
+            <div class="selected-state"></div>
+        </div>
+        <div class="row row_4">
+                <a class="cell-status-box">
+                    <div class="status-popout"></div>
+                </a>
+                <a class="translator-box">
+                    <div class="assign-popout"></div>
+                </a>
+                <a class="cell-deadline-box">
+                    <div class="deadline-popout"></div>
+                </a>
+                <a class="cell-reviewer-box">
+                    <div class="assign-popout"></div>
+                </a>
+                <a class="cell-deadline-r-box">
+                    <div class="deadline-popout"></div>
+                </a>
+                <a class="cell-more-box">
+                    <div class="more-popout"></div>
+                </a>
+            <a class="checkbox"></a>
+            <div class="selected-state"></div>
+        </div>
+        <div class="row row_5">
+                <a class="cell-status-box">
+                    <div class="status-popout"></div>
+                </a>
+                <a class="translator-box">
+                    <div class="assign-popout"></div>
+                </a>
+                <a class="cell-deadline-box">
+                    <div class="deadline-popout"></div>
+                </a>
+                <a class="cell-reviewer-box">
+                    <div class="assign-popout"></div>
+                </a>
+                <a class="cell-deadline-r-box">
+                    <div class="deadline-popout"></div>
+                </a>
+                <a class="cell-more-box">
+                    <div class="more-popout"></div>
+                </a>
+            <a class="checkbox"></a>
+            <div class="selected-state"></div>
+        </div>
+        <div class="row row_6">
+                <a class="cell-status-box">
+                    <div class="status-popout"></div>
+                </a>
+                <a class="translator-box">
+                    <div class="assign-popout"></div>
+                </a>
+                <a class="cell-deadline-box">
+                    <div class="deadline-popout"></div>
+                </a>
+                <a class="cell-reviewer-box">
+                    <div class="assign-popout"></div>
+                </a>
+                <a class="cell-deadline-r-box">
+                    <div class="deadline-popout"></div>
+                </a>
+                <a class="cell-more-box">
+                    <div class="more-popout"></div>
+                </a>
+            <a class="checkbox"></a>
+            <div class="selected-state"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <script>
+        $( ".checkbox" ).click(function() {
+        $(this).parent('.row').toggleClass( "active-checkbox" );
+        $( ".table-header-activated").addClass( "active-table-header" );
+        });
+    </script>
+
+    <script>
+        $( ".cell-status-box" ).click(function() {
+        $(this).children('.status-popout').toggleClass( "set-status-popout" );
+        });
+    </script>
+
+    <script>
+        $( ".translator-box" ).click(function() {
+        $(this).children('.assign-popout').toggleClass( "active-popout" );
+        });
+    </script>
+
+    <script>
+        $( ".cell-deadline-box" ).click(function() {
+        $(this).children('.deadline-popout').toggleClass( "set-deadline-popout" );
+        });
+    </script>
+
+    <script>
+        $( ".cell-deadline-r-box" ).click(function() {
+        $(this).children('.deadline-popout').toggleClass( "set-deadline-popout" );
+        });
+    </script>
+
+    <script>
+        $( ".cell-reviewer-box" ).click(function() {
+        $(this).children('.reviewer-popout').toggleClass( "set-reviewer-popout" );
+        });
+    </script>
+
+    <script>
+        $( ".cell-more-box" ).click(function() {
+        $(this).children('.more-popout').toggleClass( "set-more-popout" );
+        });
+    </script>
+
+    <script>
+        $( ".export-box" ).click(function() {
+        $(this).children('.export-popout').toggleClass( "set-export-popout" );
+        });
+    </script>
+    
+    <script>
+        $( ".translator-dropdown-button" ).click(function() {
+        $(".translator-dropdown").toggleClass( "activated" );
+        });
+    </script>
+
+</body>
+</html>
