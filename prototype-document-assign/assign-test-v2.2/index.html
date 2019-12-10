@@ -49,7 +49,7 @@
                     <div class="deadline-popout"></div>
                 </a>
                 <a class="cell-reviewer-box">
-                    <div class="assign-popout"></div>
+                    <div class="reviewer-popout"></div>
                 </a>
                 <a class="cell-deadline-r-box">
                     <div class="deadline-popout"></div>
@@ -71,7 +71,7 @@
                     <div class="deadline-popout"></div>
                 </a>
                 <a class="cell-reviewer-box">
-                    <div class="assign-popout"></div>
+                    <div class="reviewer-popout"></div>
                 </a>
                 <a class="cell-deadline-r-box">
                     <div class="deadline-popout"></div>
@@ -93,7 +93,7 @@
                     <div class="deadline-popout"></div>
                 </a>
                 <a class="cell-reviewer-box">
-                    <div class="assign-popout"></div>
+                    <div class="reviewer-popout"></div>
                 </a>
                 <a class="cell-deadline-r-box">
                     <div class="deadline-popout"></div>
@@ -115,7 +115,7 @@
                     <div class="deadline-popout"></div>
                 </a>
                 <a class="cell-reviewer-box">
-                    <div class="assign-popout"></div>
+                    <div class="reviewer-popout"></div>
                 </a>
                 <a class="cell-deadline-r-box">
                     <div class="deadline-popout"></div>
@@ -137,7 +137,7 @@
                     <div class="deadline-popout"></div>
                 </a>
                 <a class="cell-reviewer-box">
-                    <div class="assign-popout"></div>
+                    <div class="reviewer-popout"></div>
                 </a>
                 <a class="cell-deadline-r-box">
                     <div class="deadline-popout"></div>
@@ -162,6 +162,9 @@
     <script>
         $( ".cell-status-box" ).click(function() {
         $(this).children('.status-popout').toggleClass( "set-status-popout" );
+        },);
+        $( ".cell-status-box" ).mouseleave(function() {
+        $(this).children('.status-popout').removeClass( "set-status-popout" );
         });
     </script>
 
@@ -169,11 +172,17 @@
         $( ".translator-box" ).click(function() {
         $(this).children('.assign-popout').toggleClass( "active-popout" );
         });
+        $( ".translator-box" ).mouseleave(function() {
+        $(this).children('.assign-popout').removeClass( "active-popout" );
+        });
     </script>
 
     <script>
         $( ".cell-deadline-box" ).click(function() {
         $(this).children('.deadline-popout').toggleClass( "set-deadline-popout" );
+        });
+        $( ".cell-deadline-box" ).mouseleave(function() {
+        $(this).children('.deadline-popout').removeClass( "set-deadline-popout" );
         });
     </script>
 
@@ -181,11 +190,17 @@
         $( ".cell-deadline-r-box" ).click(function() {
         $(this).children('.deadline-popout').toggleClass( "set-deadline-popout" );
         });
+        $( ".cell-deadline-r-box" ).mouseleave(function() {
+        $(this).children('.deadline-popout').removeClass( "set-deadline-popout" );
+        });
     </script>
 
     <script>
         $( ".cell-reviewer-box" ).click(function() {
         $(this).children('.reviewer-popout').toggleClass( "set-reviewer-popout" );
+        });
+        $( ".cell-reviewer-box" ).mouseleave(function() {
+        $(this).children('.reviewer-popout').removeClass( "set-reviewer-popout" );
         });
     </script>
 
@@ -193,17 +208,26 @@
         $( ".cell-more-box" ).click(function() {
         $(this).children('.more-popout').toggleClass( "set-more-popout" );
         });
+        $( ".cell-more-box" ).mouseleave(function() {
+        $(this).children('.more-popout').removeClass( "set-more-popout" );
+        });
     </script>
 
     <script>
         $( ".export-box" ).click(function() {
         $(this).children('.export-popout').toggleClass( "set-export-popout" );
         });
+        $( ".export-box" ).mouseleave(function() {
+        $(this).children('.export-popout').removeClass( "set-export-popout" );
+        });
     </script>
     
     <script>
         $( ".translator-dropdown-button" ).click(function() {
         $(".translator-dropdown").toggleClass( "activated" );
+        });
+        $( ".translator-dropdown-button" ).mouseleave(function() {
+        $(this).children('.translator-dropdown').removeClass( "activated" );
         });
     </script>
 
