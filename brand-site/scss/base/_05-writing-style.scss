@@ -1,0 +1,29 @@
+.writing-style {
+
+    li {
+        padding: 4px 0;
+        line-height: 1.6rem;
+        font-size: 14px;
+      }
+
+    .boxWrapper {
+        margin-bottom: 0;
+    }
+
+    .box {
+    
+        div {
+            padding: $sizing-s;
+            min-height: 265px;
+        }
+    }
+
+    h3 span {
+        font-family: 'Rubik Medium';
+    }
+
+    strong {
+        font-weight: normal;
+        font-family: 'Rubik Medium';
+    }
+}

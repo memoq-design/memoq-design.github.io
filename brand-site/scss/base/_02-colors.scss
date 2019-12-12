@@ -1,0 +1,51 @@
+.color-card {
+    display: block;
+    width: 100%;
+    height: $sizing-xxl;
+    border-top-left-radius: $sizing-xxs;
+    border-top-right-radius: $sizing-xxs;
+
+    &.tangelo { background-color: $color-tangelo; }
+    &.martinique { background-color: $color-martinique; }
+    &.dodger { background-color: $color-dodger; }
+    &.white { background-color: $color-white; }
+    &.crayola { background-color: $color-crayola; }
+    &.cinnabar { background-color: $color-cinnabar; }
+    &.mikado { background-color: $color-mikado; }
+    &.sasquatch-s { background-color: $color-sasquatch-s; }
+    &.cerise { background-color: $color-cerise; }
+    &.slate { background-color: $color-slate; }
+    &.heliotrope { background-color: $color-heliotrope; }
+    &.neutral500 { background-color: $color-neutral500; }
+    &.neutral400 { background-color: $color-neutral400; }
+    &.neutral300 { background-color: $color-neutral300; }
+    &.neutral200 { background-color: $color-neutral200; }
+    &.neutral100 { background-color: $color-neutral100; border-bottom: solid 1px $color-neutral200; }
+    &.neutral0 { background-color: $color-neutral0; }
+}
+
+.boxFooter {
+    flex-wrap: wrap;
+
+    .color-name {
+        display: inline-block;
+        width: 50%;
+
+        &:first-child { margin-bottom: $sizing-xs; }
+
+        .label-name,
+        .label-value {
+            display: block;
+            width: 100%;
+            position: relative;
+
+            .icon {
+                position: absolute;
+                right: 0;
+            }
+        }
+
+        .label-name { color: $color-neutral500; }
+        .label-value { text-transform: none; }
+    }
+}

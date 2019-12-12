@@ -1,0 +1,12 @@
+.content.start-page {
+  margin-top: $sizing-l;
+
+  * {
+    @extend %centered-content;
+  }
+
+  h1 {
+    text-align: center;
+    margin: $sizing-l 0 $sizing-s;
+  }
+}

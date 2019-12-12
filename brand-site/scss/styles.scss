@@ -1,0 +1,360 @@
+@import 'base/variables';
+@import 'base/start-page';
+@import 'base/_01-logos';
+@import 'base/_02-colors';
+@import 'base/_03-typography';
+@import 'base/_04-illustrations';
+@import 'base/_05-writing-style';
+@import 'base/_templates';
+
+// Rem calculation
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+  line-height: $size * 1.5;
+}
+
+@font-face {
+  font-family: 'Rubik Regular';
+  src: url('../assets/fonts/rubik-regular-webfont/rubik-v8-latin-regular.eot'); 
+  src: url('../assets/fonts/rubik-regular-webfont/rubik-v8-latin-regular.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/rubik-regular-webfont/rubik-v8-latin-regular.woff2') format('woff2'),
+       url('../assets/fonts/rubik-regular-webfont/rubik-v8-latin-regular.woff') format('woff'),
+       url('../assets/fonts/rubik-regular-webfont/rubik-v8-latin-regular.ttf')  format('truetype'),
+}
+
+@font-face {
+  font-family: 'Rubik Medium';
+  src: url('../assets/fonts/rubik-medium-webfont/Rubik-Medium.eot'); 
+  src: url('../assets/fonts/rubik-medium-webfont/Rubik-Medium.eot#iefix') format('embedded-opentype'),
+       url('../assets/fonts/rubik-medium-webfont/Rubik-Medium.woff2') format('woff2'),
+       url('../assets/fonts/rubik-medium-webfont/Rubik-Medium.woff') format('woff'),
+       url('../assets/fonts/rubik-medium-webfont/Rubik-Medium.ttf')  format('truetype'),
+}
+
+@font-face {
+  font-family: 'Bariol Regular';
+  src: url('../assets/fonts/bariol-regular-webfont/bariol_regular-webfont.eot'); 
+  src: url('../assets/fonts/bariol-regular-webfont/bariol_regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/bariol-regular-webfont/bariol_regular-webfont.woff2') format('woff2'),
+       url('../assets/fonts/bariol-regular-webfont/bariol_regular-webfont.woff') format('woff'),
+       url('../assets/fonts/bariol-regular-webfont/bariol_regular-webfont.ttf')  format('truetype'),
+}
+
+@font-face {
+  font-family: 'Bariol Bold';
+  src: url('../assets/fonts/bariol-bold-webfont/bariol_bold-webfont.eot'); 
+  src: url('../assets/fonts/bariol-bold-webfont/bariol_bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/bariol-bold-webfont/bariol_bold-webfont.woff2') format('woff2'),
+       url('../assets/fonts/bariol-bold-webfont/bariol_bold-webfont.woff') format('woff'),
+       url('../assets/fonts/bariol-bold-webfont/bariol_bold-webfont.ttf')  format('truetype'),
+}
+
+body {
+  font-family: 'Rubik Regular';
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color: $color-martinique;
+}
+
+a {
+  color: $color-dodger;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.button-primary {
+  display: inline-block;
+  border-radius: 100px;
+  background-color: $color-tangelo;
+  font-size: 12px;
+  width: 160px;
+  color: $color-white;
+  text-align: center;
+  padding: $sizing-xxs 0;
+  font-family: 'Rubik Medium';
+}
+
+h1, h2 {
+  font-family: 'Bariol Bold';
+}
+
+.pageBlock {
+  margin-bottom: $sizing-xl;
+}
+
+.pageHeader {
+  margin-bottom: $sizing-xl;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pageTitle { 
+  @include fontSize(36px); 
+  margin: 0;
+
+}
+
+.blockTitle { 
+  @include fontSize(26px);
+  margin: 0 0 $sizing-s;
+}
+
+.icon {
+  display: inline-block;
+  width: $sizing-xs;
+  height: $sizing-xs;
+
+  &.icon-copy {
+    background-image: url('../assets/icons/file-copy.svg');
+  }
+
+}
+
+.boxWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $sizing-m;
+  width: 100%;
+
+  &.boxes-50,
+  &.boxes-33,
+  &.boxes-25 {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .box { 
+      margin-right: $sizing-s; 
+      
+    }
+  }
+
+  &.boxes-50 {
+
+    .box { 
+      width: 48.7%;
+      margin-bottom: $sizing-m;
+
+      &:nth-child(even) { margin-right: 0; }
+    }
+
+  }
+
+  &.boxes-33 {
+
+    .box { 
+      width: 31.6%;
+
+      &:last-child { margin-right: 0; }
+    }
+
+  }
+
+  &.boxes-25 {
+
+    .box {
+      width: 22.437%;
+
+      &:last-child { margin-right: 0; }
+      &:first-child { margin-bottom: $sizing-m; }
+    }
+
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  min-height: 100vh;
+}
+
+%centered-content {
+  margin: 0 auto;
+}
+
+.boxTitle {
+  @include fontSize(12px); 
+  color: $color-neutral500;
+  margin: 0 0 $sizing-xs 0;
+}
+
+.box-depth {
+
+  &.depth-300 {
+    border-radius: $sizing-xxs;
+    border: solid 1px $color-neutral100;
+    box-shadow: 0px 2px 4px rgba(59, 55, 81, 0.06);
+    transition: box-shadow 0.2s ease-in-out;
+
+    &.martinique { background-color: $color-martinique; }    
+    &.tangelo { background-color: $color-tangelo; }
+
+    &:hover {
+      box-shadow: 0px 4px 16px rgba(59, 55, 81, 0.12);
+      transition: box-shadow 0.2s ease-in-out;
+    }
+
+  }
+  
+  .boxFooter {
+    background-color: $color-neutral100;
+    width: 100%;
+    padding: $sizing-xs/2 $sizing-xs;
+    @include fontSize(12px);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    border-bottom-left-radius: $sizing-xxs/2;
+    border-bottom-right-radius: $sizing-xxs/2;
+
+    .options-left,
+    .options-right {  display: inline-block; }
+
+    .options-left {
+
+      a { 
+        display: inline-block;
+        border-right: solid 1px $color-neutral200;
+        margin-right: $sizing-xxs;
+        padding-right: $sizing-xxs;
+
+        &:last-child { 
+          border: 0; 
+          margin-right: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.sidebar-wrapper {
+  width: 192px;
+  background-color: $color-martinique;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-left: $sizing-s;
+    margin-top: $sizing-l;
+    @include fontSize(14px);
+  }
+
+  h3 {
+    font-family: 'Rubik Regular';
+  }
+
+  .sidebar {
+    position: fixed;
+    color: $color-white;
+    padding-top: $sizing-l;
+    width: 192px;
+  }
+
+  .logo-memoq {
+    display: block;
+    background-image: url('../assets/logos/logo-memoq.svg');
+    width: 110px;
+    height: 32px;
+    margin-left: $sizing-s;
+  }
+
+  // Tangelo colored border on hover
+  %menu-border {
+    display: inline-block;
+    content: '';
+    width: 4px;
+    background-color: $color-tangelo;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  .left-menu {
+    flex-grow: 1;
+
+    a {
+      display: block;
+      padding: $sizing-xxs 0 $sizing-xxs $sizing-s;
+      color: $color-white;
+      @include fontSize(14px);
+      position: relative;
+      text-decoration: none;
+      transition: background-color 0.2s ease-in-out;
+
+      &:before {
+        opacity: 0;
+        @extend %menu-border;
+      }
+
+      &:hover {
+        background-color: lighten($color-martinique, 8%);
+        transition: background-color 0.2s ease-in-out;
+      }
+
+      &.active {
+        background-color: $color-white;
+        color: $color-martinique;
+        text-decoration: none;
+
+        &:before {
+          opacity: 1;
+          @extend %menu-border;
+        }
+      }
+    }
+  }
+}
+
+.content-container {
+  flex-grow: 1;
+  position: relative;
+  margin-top: $sizing-l;
+}
+
+.content {
+  width: 936px;
+  @extend %centered-content;
+
+  p {
+    @include fontSize(16px);
+  }
+}
+
+.subMenu {
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+
+  li { 
+    list-style-type: none; 
+    display: inline-block;
+    @include fontSize(14px);
+    margin-right: $sizing-xs;
+    padding-right: $sizing-xs;
+    border-right: solid 1px $color-neutral200;
+
+    &:last-child {
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+  }
+}

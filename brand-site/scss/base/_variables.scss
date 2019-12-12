@@ -1,0 +1,38 @@
+// Primary colors
+$color-tangelo:    #F47623;
+$color-martinique: #3B3751;
+$color-white:      #FFFFFF;
+$color-dodger:     #178CF6;
+
+//Secondary colors
+$color-crayola:    #14C97B;
+$color-cinnabar:   #EF3F3F;
+$color-mikado:     #FFBF09;
+$color-sasquatch-s:#FF3E7F;
+$color-cerise:     #EA417A;
+$color-slate:      #92AFD7;
+$color-heliotrope: #886CFF;
+
+// Neutral colors
+$color-neutral500: #86829D;
+$color-neutral400: #AEABBE;
+$color-neutral300: #C4C1D2;
+$color-neutral200: #D8D7E2;
+$color-neutral100: #ececf2;
+$color-neutral0:   #FAFAFD;
+
+// Sizing definitions
+$sizing-base:       8px;
+
+$sizing-xxs: $sizing-base;
+$sizing-xs:  $sizing-base*2;
+$sizing-s:   $sizing-base*3;
+$sizing-m:   $sizing-base*4;
+$sizing-l:   $sizing-base*5;
+$sizing-xl:  $sizing-base*6;
+$sizing-xxl: $sizing-base*10;
+$sizing-xxxl: $sizing-base*12;
+
+
+// Transitions
+$transition-basic: 200ms;
