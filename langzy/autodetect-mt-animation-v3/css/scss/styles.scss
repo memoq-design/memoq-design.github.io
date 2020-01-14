@@ -36,7 +36,7 @@ body {
     height: $text-mt-niu-height;
     background-size: $text-mt-niu-width $text-mt-niu-height;
     background-image: url(../images/text-mt-niu.png);
-    animation: 1s slide-in 1s forwards;
+    animation: 0.6s slide-in 0.6s forwards;
     position: absolute;
     top: -20px;
 }
@@ -46,7 +46,7 @@ body {
     height: $text-mt-ms-height;
     background-size: $text-mt-ms-width $text-mt-ms-height;
     background-image: url(../images/text-mt-ms.png);
-    animation: 1s slide-out 1s forwards;
+    animation: 0.6s slide-out 0.6s forwards;
     position: absolute;
 }
 
