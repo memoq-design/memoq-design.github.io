@@ -74,6 +74,15 @@ h2 {
   -webkit-box-shadow: 0px 4px 8px rgba(59, 55, 81, 0.08);
           box-shadow: 0px 4px 8px rgba(59, 55, 81, 0.08);
   border-radius: 8px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.container-project:hover {
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  -webkit-box-shadow: 0px 12px 16px rgba(59, 55, 81, 0.08);
+          box-shadow: 0px 12px 16px rgba(59, 55, 81, 0.08);
 }
 
 .container-project time {
