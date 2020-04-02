@@ -1,6 +1,7 @@
 $color-martinique: #3b3751;
 $color-white: #ffffff;
 $color-neutral-0: #FAFAFD;
+$color-neutral-400: #AEABBE;
 $color-tangelo: #F47623;
 $color-dodger: #178CF6;
 
@@ -73,6 +74,13 @@ h2 {
     margin: $sizing-16 0;
     background-color: $color-white;
     box-shadow: $box-shadow;
+
+    date {
+        font-size: 14px;
+        color: $color-neutral-400;
+        display: inline-block;
+        margin-bottom: $sizing-base;
+    }
 }
 
 ul {
