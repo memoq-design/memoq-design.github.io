@@ -29,13 +29,13 @@ a:hover {
 
 header {
   background-color: #2d2a3d;
-  padding: 16px;
+  padding: 8px;
 }
 
 .header-logo {
   display: inline-block;
-  width: 136px;
-  height: 40px;
+  width: 107px;
+  height: 32px;
   background-image: url(../assets/logo.svg);
 }
 
@@ -63,7 +63,7 @@ h2 {
 .container-page-title {
   background-color: #3b3751;
   color: #ffffff;
-  padding: 48px 0;
+  padding: 72px 0;
 }
 
 .container-project {

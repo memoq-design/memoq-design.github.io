@@ -49,13 +49,13 @@ a {
 
 header {
     background-color: #2d2a3d;
-    padding: $sizing-16;
+    padding: $sizing-base;
 }
 
 .header-logo {
     display: inline-block;
-    width: 136px;
-    height: 40px;
+    width: 107px;
+    height: 32px;
     background-image: url(../assets/logo.svg);
 }
 
@@ -78,7 +78,7 @@ h2 {
 .container-page-title {
     background-color: $color-martinique;
     color: $color-white;
-    padding: $sizing-48 0;
+    padding: $sizing-72 0;
 }
 
 .container-project {
