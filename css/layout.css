@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Bariol Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Bariol Regular"), url("../assets/fonts/bariol_regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Bariol Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Bariol Bold"), url("../assets/fonts/bariol_bold-webfont.woff") format("woff");
+}
+
 body {
   font-family: 'Rubik', sans-serif;
 }
@@ -12,5 +26,9 @@ header {
   width: 136px;
   height: 40px;
   background-image: url(../assets/logo.svg);
+}
+
+h1 {
+  font-family: 'Bariol Bold', sans-serif;
 }
 /*# sourceMappingURL=layout.css.map */
