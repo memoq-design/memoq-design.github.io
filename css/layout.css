@@ -48,7 +48,7 @@ h1 {
 h2 {
   margin-bottom: 0;
   font-family: 'Bariol Bold', sans-serif;
-  font-size: 24px;
+  font-size: 28px;
 }
 
 .container-project {
@@ -57,6 +57,7 @@ h2 {
   background-color: #ffffff;
   -webkit-box-shadow: 0px 4px 8px rgba(59, 55, 81, 0.08);
           box-shadow: 0px 4px 8px rgba(59, 55, 81, 0.08);
+  border-radius: 8px;
 }
 
 .container-project time {

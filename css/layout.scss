@@ -66,7 +66,7 @@ h1 {
 h2 {
     margin-bottom: 0;
     font-family: 'Bariol Bold', sans-serif;
-    font-size: 24px;
+    font-size: 28px;
 }
 
 .container-project {
@@ -74,6 +74,7 @@ h2 {
     margin: $sizing-16 0;
     background-color: $color-white;
     box-shadow: $box-shadow;
+    border-radius: $sizing-base;
 
     time {
         font-size: 14px;
