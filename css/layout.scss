@@ -1,6 +1,7 @@
 $color-brand-martinique: #3b3751;
 $color-white: #ffffff;
 $color-neutral-0: #FAFAFD;
+$color-tangelo: #F47623;
 $sizing-base: 8px;
 $sizing-16: $sizing-base * 2;
 $sizing-24: $sizing-base * 3;
@@ -28,6 +29,14 @@ $box-shadow: 0px 4px 8px rgba(59, 55, 81, 0.08);
 body {
     font-family: 'Rubik', sans-serif;
     background-color: $color-neutral-0;
+}
+
+a {
+    color: $color-tangelo;
+    
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 header {
