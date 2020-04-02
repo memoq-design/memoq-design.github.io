@@ -35,6 +35,12 @@ h1 {
   margin-bottom: 40px;
 }
 
+h2 {
+  margin-bottom: 0;
+  font-family: 'Bariol Bold', sans-serif;
+  font-size: 24px;
+}
+
 .container-project {
   padding: 24px;
   margin: 16px 0;
