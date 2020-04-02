@@ -18,7 +18,7 @@ body {
 }
 
 a {
-  color: #F47623;
+  color: #178CF6;
 }
 
 a:hover {
@@ -56,5 +56,9 @@ h2 {
   background-color: #ffffff;
   -webkit-box-shadow: 0px 4px 8px rgba(59, 55, 81, 0.08);
           box-shadow: 0px 4px 8px rgba(59, 55, 81, 0.08);
+}
+
+li {
+  padding: 8px;
 }
 /*# sourceMappingURL=layout.css.map */
