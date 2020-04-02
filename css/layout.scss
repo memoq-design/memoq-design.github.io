@@ -5,6 +5,8 @@ $sizing-16: $sizing-base * 2;
 $sizing-24: $sizing-base * 3;
 $sizing-32: $sizing-base * 4;
 $sizing-40: $sizing-base * 5;
+$sizing-48: $sizing-base * 6;
+$sizing-72: $sizing-base * 9;
 
 @font-face {
     font-family: 'Bariol Regular';
@@ -28,6 +30,7 @@ body {
 header {
     background-color: $color-brand-martinique;
     padding: $sizing-16;
+    margin-bottom: $sizing-72;
 }
 
 .header-logo {

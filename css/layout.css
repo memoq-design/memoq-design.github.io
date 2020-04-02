@@ -19,6 +19,7 @@ body {
 header {
   background-color: #3b3751;
   padding: 16px;
+  margin-bottom: 72px;
 }
 
 .header-logo {
