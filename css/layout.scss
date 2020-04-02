@@ -6,6 +6,10 @@ $sizing-24: $sizing-base * 3;
 $sizing-32: $sizing-base * 4;
 $sizing-40: $sizing-base * 5;
 
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
 header {
     background-color: $color-brand-martinique;
     padding: $sizing-16;
