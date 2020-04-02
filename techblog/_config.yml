@@ -1,2 +1,3 @@
 name: György Bokros
 markdown: kramdown 
+permalink: /blog/:year/:month/:day/:title
