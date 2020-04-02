@@ -8,12 +8,12 @@ $sizing-40: $sizing-base * 5;
 
 header {
     background-color: $color-brand-martinique;
-    height: 40px;
     padding: $sizing-16;
 }
 
 .header-logo {
     display: inline-block;
     width: 136px;
+    height: 40px;
     background-image: url(../assets/logo.svg);
 }

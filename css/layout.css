@@ -1,12 +1,12 @@
 header {
   background-color: #3b3751;
-  height: 40px;
   padding: 16px;
 }
 
 .header-logo {
   display: inline-block;
   width: 136px;
+  height: 40px;
   background-image: url(../assets/logo.svg);
 }
 /*# sourceMappingURL=layout.css.map */
