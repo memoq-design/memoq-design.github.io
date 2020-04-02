@@ -30,7 +30,6 @@ a:hover {
 header {
   background-color: #3b3751;
   padding: 16px;
-  margin-bottom: 72px;
 }
 
 .header-logo {
@@ -42,7 +41,6 @@ header {
 
 h1 {
   font-family: 'Bariol Bold', sans-serif;
-  margin-bottom: 40px;
 }
 
 h2 {
@@ -60,6 +58,12 @@ h2 {
   -ms-flex-line-pack: center;
       align-content: center;
   margin-bottom: 24px;
+}
+
+.container-page-title {
+  background-color: #252233;
+  color: #ffffff;
+  padding: 48px 0;
 }
 
 .container-project {

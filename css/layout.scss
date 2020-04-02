@@ -50,7 +50,6 @@ a {
 header {
     background-color: $color-martinique;
     padding: $sizing-16;
-    margin-bottom: $sizing-72;
 }
 
 .header-logo {
@@ -62,7 +61,6 @@ header {
 
 h1 {
     font-family: 'Bariol Bold', sans-serif;
-    margin-bottom: $sizing-40;
 }
 
 h2 {
@@ -75,6 +73,12 @@ h2 {
     justify-content: space-between;
     align-content: center;
     margin-bottom: $sizing-24;
+}
+
+.container-page-title {
+    background-color: darken($color-martinique, 10%);
+    color: $color-white;
+    padding: $sizing-48 0;
 }
 
 .container-project {
