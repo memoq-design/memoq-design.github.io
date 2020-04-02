@@ -2,4 +2,10 @@ header {
   background-color: #3b3751;
   height: 40px;
 }
+
+.header-logo {
+  width: 136px;
+  height: 40px;
+  background-image: url(../assets/logo.svg);
+}
 /*# sourceMappingURL=layout.css.map */
