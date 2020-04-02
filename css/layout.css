@@ -46,8 +46,6 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 16px;
-  padding-bottom: 16px;
   font-family: 'Bariol Bold', sans-serif;
   font-size: 28px;
 }
@@ -61,6 +59,9 @@ h2 {
           justify-content: space-between;
   -ms-flex-line-pack: center;
       align-content: center;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: solid 1px #AEABBE;
 }
 
 .container-project {
