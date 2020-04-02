@@ -99,8 +99,13 @@ h2 {
     li {
         padding: 0;
         list-style-type: none;
-        margin-right: $sizing-32;
+        margin-right: $sizing-16;
+        padding-right: $sizing-16;
+        border-right: solid 1px $color-neutral-100;
 
-        &:last-child { margin-right: 0; }
+        &:last-child { 
+            margin-right: 0;
+            border-right: none;
+        }
     }
 }
