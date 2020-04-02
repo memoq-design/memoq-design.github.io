@@ -59,9 +59,7 @@ h2 {
           justify-content: space-between;
   -ms-flex-line-pack: center;
       align-content: center;
-  margin-bottom: 16px;
-  padding-bottom: 16px;
-  border-bottom: solid 1px #ECECF2;
+  margin-bottom: 24px;
 }
 
 .container-project {
