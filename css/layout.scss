@@ -1,9 +1,15 @@
 $color-brand-martinique: #3b3751;
 $color-white: #ffffff;
+$sizing-base: 8px;
+$sizing-16: $sizing-base * 2;
+$sizing-24: $sizing-base * 3;
+$sizing-32: $sizing-base * 4;
+$sizing-40: $sizing-base * 5;
 
 header {
     background-color: $color-brand-martinique;
     height: 40px;
+    padding: $sizing-16;
 }
 
 .header-logo {
