@@ -48,7 +48,7 @@ a {
 }
 
 header {
-    background-color: $color-martinique;
+    background-color: #2d2a3d;
     padding: $sizing-16;
 }
 
@@ -76,7 +76,7 @@ h2 {
 }
 
 .container-page-title {
-    background-color: darken($color-martinique, 10%);
+    background-color: $color-martinique;
     color: $color-white;
     padding: $sizing-48 0;
 }
