@@ -46,4 +46,8 @@ h1 {
 
 .project-list {
     margin-top: $sizing-24;
+
+    li {
+        padding: $sizing-base;
+    }
 }

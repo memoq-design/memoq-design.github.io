@@ -36,4 +36,8 @@ h1 {
 .project-list {
   margin-top: 24px;
 }
+
+.project-list li {
+  padding: 8px;
+}
 /*# sourceMappingURL=layout.css.map */
