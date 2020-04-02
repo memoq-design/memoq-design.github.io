@@ -36,6 +36,7 @@ a {
     
     &:hover {
         text-decoration: underline;
+        color: darken($color-tangelo, 10%);
     }
 }
 
