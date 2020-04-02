@@ -32,4 +32,8 @@ header {
 h1 {
   font-family: 'Bariol Bold', sans-serif;
 }
+
+.project-list {
+  margin-top: 24px;
+}
 /*# sourceMappingURL=layout.css.map */
