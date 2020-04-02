@@ -93,15 +93,12 @@ h2 {
     ul {
         margin: 0;
         padding: 0;
+        display: flex;
     }
     
     li {
         padding: 0;
         list-style-type: none;
         margin-bottom: $sizing-16;
-        
-        &:last-child {
-            margin-bottom: 0;
-        }
     }
 }
