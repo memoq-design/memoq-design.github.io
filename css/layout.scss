@@ -2,6 +2,7 @@ $color-martinique: #3b3751;
 $color-white: #ffffff;
 $color-neutral-0: #FAFAFD;
 $color-neutral-100: #ECECF2;
+$color-neutral-200: #D8D7E2;
 $color-neutral-400: #AEABBE;
 $color-tangelo: #F47623;
 $color-dodger: #178CF6;
@@ -101,7 +102,7 @@ h2 {
         list-style-type: none;
         margin-right: $sizing-16;
         padding-right: $sizing-16;
-        border-right: solid 1px $color-neutral-100;
+        border-right: solid 1px $color-neutral-200;
 
         &:last-child { 
             margin-right: 0;
