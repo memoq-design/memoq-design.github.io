@@ -51,6 +51,12 @@ h2 {
   font-size: 28px;
 }
 
+.update-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .container-project {
   padding: 24px;
   margin: 24px 0;
