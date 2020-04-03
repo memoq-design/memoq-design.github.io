@@ -21,13 +21,14 @@ body {
 header {
   background-color: #2d2a3d;
   padding: 8px;
-  height: 48px;
+  height: 200px;
   margin-bottom: 72px;
 }
 
 .content-container {
   width: 640px;
   margin: 0 auto;
+  position: relative;
 }
 
 .header_logo-q {
@@ -42,5 +43,6 @@ header {
   width: 432px;
   height: 400px;
   margin: 0 auto;
+  position: absolute;
 }
 /*# sourceMappingURL=layout-blog.css.map */
