@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAqBA,UAAU;EACN,WAAW,EAAE,gBAAgB;EAC7B,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,MAAM;EACnB,GAAG,EAAE,uBAAuB,EAAE,kDAAkD,CAAC,cAAc;;;AAInG,UAAU;EACN,WAAW,EAAE,aAAa;EAC1B,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,MAAM;EACnB,GAAG,EAAE,oBAAoB,EAAE,+CAA+C,CAAC,cAAc;;;AAG7F,AAAA,IAAI,CAAC;EACD,WAAW,EAAE,mBAAmB;EAChC,gBAAgB,EApCF,OAAO;EAqCrB,KAAK,EAvCU,OAAO;CAwCzB",
+    "sources": [
+        "layout-blog.scss"
+    ],
+    "names": [],
+    "file": "layout-blog.css"
+}

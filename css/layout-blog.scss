@@ -1,0 +1,41 @@
+$color-martinique: #3b3751;
+$color-white: #ffffff;
+$color-neutral-0: #FAFAFD;
+$color-neutral-100: #ECECF2;
+$color-neutral-200: #D8D7E2;
+$color-neutral-400: #AEABBE;
+$color-tangelo: #F47623;
+$color-dodger: #178CF6;
+
+$sizing-base: 8px;
+$sizing-16: $sizing-base * 2;
+$sizing-24: $sizing-base * 3;
+$sizing-32: $sizing-base * 4;
+$sizing-40: $sizing-base * 5;
+$sizing-48: $sizing-base * 6;
+$sizing-72: $sizing-base * 9;
+
+$box-shadow: 0px 4px 8px rgba(59, 55, 81, 0.08);
+
+$transition-default: all 0.3s linear;
+
+@font-face {
+    font-family: 'Bariol Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Bariol Regular'), url('../assets/fonts/bariol_regular-webfont.woff') format('woff');
+    }
+
+
+@font-face {
+    font-family: 'Bariol Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Bariol Bold'), url('../assets/fonts/bariol_bold-webfont.woff') format('woff');
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: $color-neutral-0;
+    color: $color-martinique;
+}
