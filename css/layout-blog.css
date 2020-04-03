@@ -24,6 +24,11 @@ header {
   height: 48px;
 }
 
+.content-container {
+  width: 640px;
+  margin: 0 auto;
+}
+
 .header_logo-q {
   background-image: url(../assets/logo-q.svg);
   display: inline-block;
