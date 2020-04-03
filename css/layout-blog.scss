@@ -39,3 +39,16 @@ body {
     background-color: $color-neutral-0;
     color: $color-martinique;
 }
+
+header {
+    background-color: #2d2a3d;
+    padding: $sizing-16;
+    height: 64px;
+}
+
+.header_logo-q {
+    background-image: url(../assets/logo-q.svg);
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+}
