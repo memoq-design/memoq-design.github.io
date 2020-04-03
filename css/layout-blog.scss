@@ -42,8 +42,8 @@ body {
 
 header {
     background-color: #2d2a3d;
-    padding: $sizing-16;
-    height: 64px;
+    padding: $sizing-base;
+    height: $sizing-48;
 }
 
 .header_logo-q {
