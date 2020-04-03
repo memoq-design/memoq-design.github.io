@@ -43,8 +43,7 @@ body {
 header {
     background-color: #2d2a3d;
     padding: $sizing-base;
-    height: 200px;
-    margin-bottom: $sizing-72;
+    height: 160px;
 }
 
 .content-container {
@@ -64,4 +63,6 @@ header {
     width: 432px;
     height: 400px;
     margin: 0 auto;
+    position: relative;
+    top: -116px;
 }
