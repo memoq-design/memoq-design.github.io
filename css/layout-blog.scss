@@ -51,8 +51,8 @@ header {
     background-color: $color-martinique;
     height: 60px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 .logo-memoq {
@@ -72,4 +72,5 @@ header {
     width: 580px;
     height: 180px;
     background-image: url(../assets/blog-header-v1.svg);
+    margin: 0 autoß;
 }
