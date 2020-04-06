@@ -67,10 +67,15 @@ header {
     a { 
         text-decoration: underline; 
         color: $color-tangelo;
+
+        &:hover {
+            text-decoration: none;
+        }
     }
 
     time {
         color: $color-neutral-400;
+        font-size: 14px;
     }
 
     .postTitle {

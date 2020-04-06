@@ -59,8 +59,13 @@ header {
   color: #F47623;
 }
 
+.post a:hover {
+  text-decoration: none;
+}
+
 .post time {
   color: #AEABBE;
+  font-size: 14px;
 }
 
 .post .postTitle {
