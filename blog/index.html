@@ -3,10 +3,13 @@ layout: blog
 title: memoQ Tech Blog
 ---
 
-<ul class="posts">
+<div class="posts">
 
   {% for post in site.posts %}
-    <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    {{ post.date | date_to_string }}
+    <h1>
+      <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </h1>
   {% endfor %}
     
-</ul>
+</div>
