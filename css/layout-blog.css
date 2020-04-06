@@ -59,14 +59,14 @@ header {
   color: #F47623;
 }
 
+.post time {
+  color: #AEABBE;
+}
+
 .post .postTitle {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 24px;
-}
-
-.post .postTitle time {
-  color: #AEABBE;
 }
 
 .post .postTitle a {
@@ -78,7 +78,7 @@ header {
   text-decoration: underline;
 }
 
-.post .postTitle p {
+.post p {
   font-size: 16px;
   line-height: 28px;
 }

@@ -69,14 +69,14 @@ header {
         color: $color-tangelo;
     }
 
+    time {
+        color: $color-neutral-400;
+    }
+
     .postTitle {
         font-size: 36px;
         font-weight: 700;
         margin-bottom: $sizing-24;
-
-        time {
-            color: $color-neutral-400;
-        }
 
         a {
             color: $color-martinique;
@@ -86,10 +86,11 @@ header {
                 text-decoration: underline;
             }
         }
-
-        p {
-            font-size: 16px;
-            line-height: 28px;
-        }
     }
+
+    p {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
 }
