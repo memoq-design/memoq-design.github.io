@@ -17,6 +17,7 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 72px;
+  background-color: #ffffff;
 }
 
 .header-memoq {
@@ -56,7 +57,7 @@ header {
   width: 557px;
   height: 140px;
   background-image: url(../assets/blog-header-v1.svg);
-  margin: 0 auto;
+  margin: 40px auto 0;
 }
 
 .post a {

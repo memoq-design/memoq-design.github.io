@@ -31,6 +31,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: $sizing-72;
+    background-color: $color-white;
 }
 
 .header-memoq {
@@ -64,7 +65,7 @@ header {
     width: 557px;
     height: 140px;
     background-image: url(../assets/blog-header-v1.svg);
-    margin: 0 auto;
+    margin: 40px auto 0;
 }
 
 .post {
