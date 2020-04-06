@@ -7,7 +7,7 @@ title: memoQ Tech Blog
 
   {% for post in site.posts %}
     <time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
-    <h1>
+    <h1 class="postTitle">
       <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </h1>
   {% endfor %}

@@ -61,3 +61,15 @@ header {
     background-image: url(../assets/blog-header-v1.svg);
     margin: 0 auto;
 }
+
+.postTitle {
+   
+    a {
+        color: $color-martinique;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

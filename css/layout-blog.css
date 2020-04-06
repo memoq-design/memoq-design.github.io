@@ -53,4 +53,13 @@ header {
   background-image: url(../assets/blog-header-v1.svg);
   margin: 0 auto;
 }
+
+.postTitle a {
+  color: #3b3751;
+  text-decoration: none;
+}
+
+.postTitle a:hover {
+  text-decoration: underline;
+}
 /*# sourceMappingURL=layout-blog.css.map */
