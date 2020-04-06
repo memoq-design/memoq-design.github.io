@@ -42,6 +42,9 @@ body {
 
 header {
     height: 300px;
+    display: flex;
+    align-content: space-between;
+    justify-content: center;
 }
 
 .header-memoq {
@@ -64,11 +67,9 @@ header {
     margin: 0 auto;
 }
 
-.blog-logo {
+.logo-blog {
+    display: inline-block;
+    width: 580px;
+    height: 180px;
     background-image: url(../assets/blog-header-v1.svg);
-    width: 432px;
-    height: 400px;
-    margin: 0 auto;
-    position: relative;
-    top: -116px;
 }
