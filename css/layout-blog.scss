@@ -62,14 +62,22 @@ header {
     margin: 0 auto;
 }
 
-.postTitle {
-   
-    a {
-        color: $color-martinique;
-        text-decoration: none;
+.post {
 
-        &:hover {
-            text-decoration: underline;
+    a { 
+        text-decoration: underline; 
+        color: $color-tangelo;
+    }
+
+    .postTitle {
+    
+        a {
+            color: $color-martinique;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }

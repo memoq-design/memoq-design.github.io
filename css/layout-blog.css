@@ -54,12 +54,17 @@ header {
   margin: 0 auto;
 }
 
-.postTitle a {
+.post a {
+  text-decoration: underline;
+  color: #F47623;
+}
+
+.post .postTitle a {
   color: #3b3751;
   text-decoration: none;
 }
 
-.postTitle a:hover {
+.post .postTitle a:hover {
   text-decoration: underline;
 }
 /*# sourceMappingURL=layout-blog.css.map */

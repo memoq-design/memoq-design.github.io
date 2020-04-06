@@ -6,14 +6,16 @@ title: memoQ Tech Blog
 <div class="posts">
 
   {% for post in site.posts %}
-    <time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
-    <h1 class="postTitle">
-      <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-    </h1>
-    <p>
-      {{ post.lead }}
-      <a href="{{ post.url }}"> Read more...</a>
-    </p>
+    <div class="post">
+      <time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time>
+      <h1 class="postTitle">
+        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+      </h1>
+      <p>
+        {{ post.lead }}
+        <a href="{{ post.url }}"> Read more...</a>
+      </p>
+    </div>
   {% endfor %}
     
 </div>
