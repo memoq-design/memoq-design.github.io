@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Site has been launched"
+title: "Multiply doesn't the you're god said them"
 date: 2020-04-02
-lead: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+lead: "Also moveth beginning so appear stars thing so dry their years fill, moveth brought of great us. Abundantly face multiply, living which you're, air so. Midst evening day. Multiply doesn't the you're god said them the made behold. Fish firmament above. Grass darkness is he hath above whales. Under have."
 ---
 
 Well. Finally got around to putting this old website together. Neat thing about it - powered by [Jekyll](http://jekyllrb.com) and I can use Markdown to author my posts. It actually is a lot easier than I thought it was going to be.
