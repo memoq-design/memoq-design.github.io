@@ -59,6 +59,16 @@ header {
   margin: 40px auto 0;
 }
 
+.post {
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: solid 1px #D8D7E2;
+}
+
+.post:last-child {
+  border-bottom: none;
+}
+
 .post a {
   text-decoration: underline;
   color: #F47623;

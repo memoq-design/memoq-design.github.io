@@ -69,6 +69,13 @@ header {
 }
 
 .post {
+    margin-bottom: $sizing-48;
+    padding-bottom: $sizing-48;
+    border-bottom: solid 1px $color-neutral-200;
+
+    &:last-child {
+        border-bottom: none;
+    }
 
     a { 
         text-decoration: underline; 
