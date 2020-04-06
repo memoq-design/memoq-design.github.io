@@ -59,6 +59,16 @@ header {
   color: #F47623;
 }
 
+.post .postTitle {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.post .postTitle time {
+  color: #AEABBE;
+}
+
 .post .postTitle a {
   color: #3b3751;
   text-decoration: none;
@@ -66,5 +76,10 @@ header {
 
 .post .postTitle a:hover {
   text-decoration: underline;
+}
+
+.post .postTitle p {
+  font-size: 16px;
+  line-height: 28px;
 }
 /*# sourceMappingURL=layout-blog.css.map */

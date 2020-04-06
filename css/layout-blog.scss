@@ -70,7 +70,14 @@ header {
     }
 
     .postTitle {
-    
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: $sizing-24;
+
+        time {
+            color: $color-neutral-400;
+        }
+
         a {
             color: $color-martinique;
             text-decoration: none;
@@ -78,6 +85,11 @@ header {
             &:hover {
                 text-decoration: underline;
             }
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 28px;
         }
     }
 }
