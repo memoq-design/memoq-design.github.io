@@ -75,11 +75,10 @@ a {
   display: inline-block;
   border-radius: 100px;
   background-color: $color-tangelo;
-  font-size: 12px;
-  width: 160px;
+  font-size: 14px;
   color: $color-white;
   text-align: center;
-  padding: $sizing-xxs 0;
+  padding: $sizing-xs;
   font-family: 'Rubik Medium';
 }
 
@@ -331,7 +330,7 @@ h1, h2 {
 }
 
 .content {
-  width: 936px;
+  width: 1000px;
   @extend %centered-content;
 
   p {
