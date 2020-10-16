@@ -1,5 +1,5 @@
 .content.start-page {
-  margin-top: $sizing-l;
+  margin-top: $sizing-xxl;
 
   * {
     @extend %centered-content;
@@ -9,4 +9,7 @@
     text-align: center;
     margin: $sizing-l 0 $sizing-s;
   }
+
+  img { width: 340px; }
+
 }
