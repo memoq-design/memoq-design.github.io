@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .website {
+        background-image: url(site.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 1366px;
+        height: 1028px;
+        margin: 0 auto;
+      }
+      .mask {
+        -webkit-mask-image: url(agt.svg);
+        mask-image: url(agt.svg);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        width: 526px;
+        height: 189px;
+        position: relative;
+        /* For prototype purposes only */
+        margin: 0 auto;
+        top: 160px;
+      }
+      .background-image-1 {
+        background-image: url(background-image.png);
+        background-size: 600px;
+        width: 600px;
+        height: 600px;
+        position: absolute;
+        left: -37px;
+        top: -204px;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        mix-blend-mode: overlay;
+      }
+      .background-image-2 {
+        background-image: url(background-image.png);
+        background-size: 600px;
+        width: 600px;
+        height: 600px;
+        position: absolute;
+        left: -37px;
+        top: -204px;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        mix-blend-mode: overlay;
+      }
+      .rotate-1 {
+        animation: spinning-around 20s linear infinite;
+        }
+      @keyframes spinning-around {
+          0% { 
+            transform: rotate(0); 
+          }
+          100% { 
+            transform: rotate(360deg);
+          }
+      }
+      .rotate-2 {
+        animation: spinning-around-2 20s linear infinite;
+        }
+      @keyframes spinning-around-2 {
+          0% { 
+            transform: rotate(360deg); 
+          }
+          100% { 
+            transform: rotate(0deg);
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="website">
+      <div class="mask">
+        <div class="background-image-1 rotate-1"></div>
+        <div class="background-image-2 rotate-2"></div>
+      </div>
+    </div>
+  </body>
+</html>
