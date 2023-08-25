@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet"> 
+    <style>
+
+      body {
+        background-color: #ECECF2;
+      }
+
+      .page-container {
+        width: 1366px;
+        height: 817px;
+        position: relative;
+        margin: 64px auto;
+      }
+
+      .page-content {
+        background-image: url(page-images/content.png);
+        background-size: 1270px 721px;
+        width: 1270px;
+        height: 721px;
+        z-index: 4;
+      }
+
+      .position-to-background {
+        position: absolute;
+        top: 48px;
+        right: 48px;
+        z-index: -1;
+      }
+
+      .background-lines {
+        background-image: url(page-images/lines.svg);
+        width: 656px;
+        height: 656px;
+        background-size: 656px;
+        position: absolute;
+        top: -45px;
+        right: 128px;
+        z-index: -2;
+      }
+
+      .agt-text-container {
+        position: relative;
+        width: 882px;
+        height: 313px;
+      }
+
+      .agt-gradient {
+        background: linear-gradient(171deg, #F9CCAE 5.33%, #D57C9B 30.27%, #9D51B0 63.83%, #491B72 87.37%);
+        background-repeat: no-repeat;
+        animation: gradient 3s cubic-bezier(0.33,1,0.68,1) forwards;
+        background-size: 100% 100%;
+        width: 882px;
+        height: 313px;
+        mask-size: 100%;
+        mask-repeat: no-repeat;
+        mask: url(agt-mask.svg);
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .agt-text {
+        background-image: url(agt-text.svg);
+        background-size: 100%;
+        width: 882px;
+        height: 313px;
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-size: 600%;
+          opacity: 0;
+        }
+        
+        100% {
+          background-size: 100%;
+          opacity: 1;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="page-content"></div>
+      <div class="background-lines"></div>
+      <div class="position-to-background">
+        <div class="agt-text-container">
+          <div class="agt-gradient"></div>
+          <div class="agt-text"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

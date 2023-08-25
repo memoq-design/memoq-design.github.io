@@ -2,54 +2,72 @@
 <html>
   <head>
     <style>
-      .website {
-        background-image: url(site.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        width: 1366px;
-        height: 1028px;
-        margin: 0 auto;
+
+    body {
+        background-color: #ECECF2;
       }
+
+      .page-container {
+        width: 1366px;
+        height: 817px;
+        position: relative;
+        margin: 64px auto;
+      }
+
+      .page-content {
+        background-image: url(page-images/content.png);
+        background-size: 1270px 721px;
+        width: 1270px;
+        height: 721px;
+        z-index: 4;
+      }
+
+      .position-to-background {
+        position: absolute;
+        top: 48px;
+        right: 48px;
+        z-index: -1;
+      }
+
+      .background-lines {
+        background-image: url(page-images/lines.svg);
+        width: 656px;
+        height: 656px;
+        background-size: 656px;
+        position: absolute;
+        top: -45px;
+        right: 128px;
+        z-index: -2;
+      }
+
+      .agt-text-container {
+        width: 882px;
+        height: 313px;
+      }
+
       .mask {
         -webkit-mask-image: url(agt.svg);
         mask-image: url(agt.svg);
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
-        width: 526px;
-        height: 189px;
-        position: relative;
-        /* For prototype purposes only */
-        margin: 0 auto;
-        top: 160px;
+        width: 882px;
+        height: 313px;
       }
-      .background-image-1 {
-        background-image: url(background-image.png);
-        background-size: 600px;
-        width: 600px;
-        height: 600px;
+      
+      .background-image {
+        background-image: url(agt-background.jpg);
+        background-size: 1000px;
+        width: 1000px;
+        height: 1000px;
         position: absolute;
-        left: -37px;
-        top: -204px;
+        left: -59px;
+        top: -343px;
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
-        mix-blend-mode: overlay;
+        
       }
-      .background-image-2 {
-        background-image: url(background-image.png);
-        background-size: 600px;
-        width: 600px;
-        height: 600px;
-        position: absolute;
-        left: -37px;
-        top: -204px;
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
-        mix-blend-mode: overlay;
-      }
-      .rotate-1 {
-        animation: spinning-around 20s linear infinite;
+      .rotate {
+        animation: spinning-around 28s linear infinite;
         }
       @keyframes spinning-around {
           0% { 
@@ -59,25 +77,21 @@
             transform: rotate(360deg);
           }
       }
-      .rotate-2 {
-        animation: spinning-around-2 20s linear infinite;
-        }
-      @keyframes spinning-around-2 {
-          0% { 
-            transform: rotate(360deg); 
-          }
-          100% { 
-            transform: rotate(0deg);
-          }
-      }
     </style>
   </head>
   <body>
-    <div class="website">
-      <div class="mask">
-        <div class="background-image-1 rotate-1"></div>
-        <div class="background-image-2 rotate-2"></div>
+
+      <div class="page-container">
+        <div class="page-content"></div>
+        <div class="background-lines"></div>
+        <div class="position-to-background">
+          <div class="agt-text-container">
+            <div class="mask">
+              <div class="background-image rotate"></div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    
   </body>
 </html>
