@@ -122,7 +122,6 @@
 </div>
 
 <script>
-    // Automatikus kijelölés betöltődéskor
     window.onload = () => {
         const firstRow = document.querySelector('.row');
         if (firstRow) {
@@ -160,6 +159,8 @@
                 const rowNumber = parseInt(command.replace('jump to row', '').trim());
                 selectRowByNumber(rowNumber);
                 speakMessage(`Jumping to row ${rowNumber}.`);
+            } else {
+                speakMessage('Command not recognized. Please try again.');
             }
         };
 
