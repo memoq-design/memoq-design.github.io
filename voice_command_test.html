@@ -159,6 +159,8 @@
                 const rowNumber = parseInt(command.replace('jump to row', '').trim());
                 selectRowByNumber(rowNumber);
                 speakMessage(`Jumping to row ${rowNumber}.`);
+            } else if (command.includes('copy source to target')) {
+                copySourceToTarget();
             } else {
                 speakMessage('Command not recognized. Please try again.');
             }
@@ -170,6 +172,18 @@
                 selectRow(row);
             } else {
                 speakMessage(`Row ${rowNumber} not found.`);
+            }
+        }
+
+        function copySourceToTarget() {
+            const selectedRow = document.querySelector('.row.selected');
+            if (selectedRow) {
+                const source = selectedRow.querySelector('.cell.description').textContent;
+                const target = selectedRow.querySelector('.cell.editable');
+                target.textContent = source;
+                speakMessage('Source copied to target.');
+            } else {
+                speakMessage('No row selected. Please select a row first.');
             }
         }
 
