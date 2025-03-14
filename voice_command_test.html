@@ -136,6 +136,12 @@
         row.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 
+    function speakMessage(message) {
+        const speech = new SpeechSynthesisUtterance(message);
+        speech.lang = 'en-US';
+        window.speechSynthesis.speak(speech);
+    }
+
     function startVoiceCommand() {
         const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
         recognition.lang = 'en-US';
@@ -149,9 +155,11 @@
             if (command.includes('select row')) {
                 const rowNumber = parseInt(command.replace('select row', '').trim());
                 selectRowByNumber(rowNumber);
+                speakMessage(`Row ${rowNumber} selected.`);
             } else if (command.includes('jump to row')) {
                 const rowNumber = parseInt(command.replace('jump to row', '').trim());
                 selectRowByNumber(rowNumber);
+                speakMessage(`Jumping to row ${rowNumber}.`);
             }
         };
 
@@ -159,15 +167,18 @@
             const row = document.querySelectorAll('.row')[rowNumber - 1];
             if (row) {
                 selectRow(row);
+            } else {
+                speakMessage(`Row ${rowNumber} not found.`);
             }
         }
 
         recognition.onerror = (event) => {
             console.error('Error occurred in recognition:', event.error);
+            speakMessage('An error occurred during voice recognition.');
         };
 
         recognition.start();
-        console.log('Voice command started...');
+        speakMessage('Voice command started.');
     }
 </script>
 
