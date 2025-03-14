@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Grid Example with Voice Command</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .grid {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #ccc;
+            width: 100%;
+        }
+        .row {
+            display: flex;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .row:hover {
+            background-color: #f0f0f0;
+        }
+        .row.selected {
+            background-color: #d0e7ff;
+            outline: 2px solid #007BFF;
+            outline-offset: -2px;
+        }
+        .cell {
+            padding: 10px;
+            border-right: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .cell:last-child {
+            border-right: none;
+        }
+        .cell.number {
+            width: 64px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        .cell.description, .cell.editable {
+            width: 50%;
+            box-sizing: border-box;
+        }
+        .cell.editable[contenteditable="true"] {
+            background-color: #ffffff;
+            cursor: text;
+            outline: none;
+            transition: background-color 0.2s ease;
+        }
+        .cell.editable[contenteditable="true"]:focus {
+            background-color: #e9f5ff;
+        }
+        button {
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Példatáblázat (div alapú) - Voice Command API-val</h2>
+
+<button onclick="startVoiceCommand()">Start Voice Command</button>
+
+<div class="grid" role="grid" aria-label="Translation grid">
+    <div class="row" role="row" onclick="selectRow(this)">
+        <div class="cell number" role="gridcell">1</div>
+        <div class="cell description" role="gridcell">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="cell editable" contenteditable="true" role="gridcell"></div>
+    </div>
+    <div class="row" role="row" onclick="selectRow(this)">
+        <div class="cell number" role="gridcell">2</div>
+        <div class="cell description" role="gridcell">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        <div class="cell editable" contenteditable="true" role="gridcell"></div>
+    </div>
+    <div class="row" role="row" onclick="selectRow(this)">
+        <div class="cell number" role="gridcell">3</div>
+        <div class="cell description" role="gridcell">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</div>
+        <div class="cell editable" contenteditable="true" role="gridcell"></div>
+    </div>
+    <div class="row" role="row" onclick="selectRow(this)">
+        <div class="cell number" role="gridcell">4</div>
+        <div class="cell description" role="gridcell">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</div>
+        <div class="cell editable" contenteditable="true" role="gridcell"></div>
+    </div>
+    <div class="row" role="row" onclick="selectRow(this)">
+        <div class="cell number" role="gridcell">5</div>
+        <div class="cell description" role="gridcell">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</div>
+        <div class="cell editable" contenteditable="true" role="gridcell"></div>
+    </div>
+    <div class="row" role="row" onclick="selectRow(this)">
+        <div class="cell number" role="gridcell">6</div>
+        <div class="cell description" role="gridcell">Deserunt mollit anim id est laborum.</div>
+        <div class="cell editable" contenteditable="true" role="gridcell"></div>
+    </div>
+    <div class="row" role="row" onclick="selectRow(this)">
+        <div class="cell number" role="gridcell">7</div>
+        <div class="cell description" role="gridcell">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</div>
+        <div class="cell editable" contenteditable="true" role="gridcell"></div>
+    </div>
+    <div class="row" role="row" onclick="selectRow(this)">
+        <div class="cell number" role="gridcell">8</div>
+        <div class="cell description" role="gridcell">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit.</div>
+        <div class="cell editable" contenteditable="true" role="gridcell"></div>
+    </div>
+</div>
+
+<script>
+    // Automatikus kijelölés betöltődéskor
+    window.onload = () => {
+        const firstRow = document.querySelector('.row');
+        if (firstRow) {
+            selectRow(firstRow);
+        }
+    };
+
+    function selectRow(row) {
+        document.querySelectorAll('.row').forEach(r => r.classList.remove('selected'));
+        row.classList.add('selected');
+        row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function startVoiceCommand() {
+        const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+        recognition.lang = 'en-US';
+        recognition.interimResults = false;
+        recognition.maxAlternatives = 1;
+
+        recognition.onresult = (event) => {
+            const command = event.results[0][0].transcript.toLowerCase();
+            console.log('Recognized command:', command);
+
+            if (command.includes('select row')) {
+                const rowNumber = parseInt(command.replace('select row', '').trim());
+                selectRowByNumber(rowNumber);
+            } else if (command.includes('jump to row')) {
+                const rowNumber = parseInt(command.replace('jump to row', '').trim());
+                selectRowByNumber(rowNumber);
+            }
+        };
+
+        function selectRowByNumber(rowNumber) {
+            const row = document.querySelectorAll('.row')[rowNumber - 1];
+            if (row) {
+                selectRow(row);
+            }
+        }
+
+        recognition.onerror = (event) => {
+            console.error('Error occurred in recognition:', event.error);
+        };
+
+        recognition.start();
+        console.log('Voice command started...');
+    }
+</script>
+
+</body>
+</html>
