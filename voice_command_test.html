@@ -102,43 +102,43 @@
     
     <div class="row" role="row" aria-selected="false" onclick="selectRow(this)">
         <div class="cell number" role="gridcell">2</div>
-        <div class="cell description" role="gridcell">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</div>
+        <div class="cell description" role="gridcell">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</div>
         <div class="cell editable" contenteditable="true" role="gridcell" aria-label="Editable target cell"></div>
     </div>
     
     <div class="row" role="row" aria-selected="false" onclick="selectRow(this)">
         <div class="cell number" role="gridcell">3</div>
-        <div class="cell description" role="gridcell">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        <div class="cell description" role="gridcell">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit.</div>
         <div class="cell editable" contenteditable="true" role="gridcell" aria-label="Editable target cell"></div>
     </div>
     
     <div class="row" role="row" aria-selected="false" onclick="selectRow(this)">
         <div class="cell number" role="gridcell">4</div>
-        <div class="cell description" role="gridcell">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</div>
+        <div class="cell description" role="gridcell">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
         <div class="cell editable" contenteditable="true" role="gridcell" aria-label="Editable target cell"></div>
     </div>
     
     <div class="row" role="row" aria-selected="false" onclick="selectRow(this)">
         <div class="cell number" role="gridcell">5</div>
-        <div class="cell description" role="gridcell">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <div class="cell description" role="gridcell">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</div>
         <div class="cell editable" contenteditable="true" role="gridcell" aria-label="Editable target cell"></div>
     </div>
     
     <div class="row" role="row" aria-selected="false" onclick="selectRow(this)">
         <div class="cell number" role="gridcell">6</div>
-        <div class="cell description" role="gridcell">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</div>
+        <div class="cell description" role="gridcell">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</div>
         <div class="cell editable" contenteditable="true" role="gridcell" aria-label="Editable target cell"></div>
     </div>
     
     <div class="row" role="row" aria-selected="false" onclick="selectRow(this)">
         <div class="cell number" role="gridcell">7</div>
-        <div class="cell description" role="gridcell">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</div>
+        <div class="cell description" role="gridcell">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</div>
         <div class="cell editable" contenteditable="true" role="gridcell" aria-label="Editable target cell"></div>
     </div>
     
     <div class="row" role="row" aria-selected="false" onclick="selectRow(this)">
         <div class="cell number" role="gridcell">8</div>
-        <div class="cell description" role="gridcell">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</div>
+        <div class="cell description" role="gridcell">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
         <div class="cell editable" contenteditable="true" role="gridcell" aria-label="Editable target cell"></div>
     </div>
     
@@ -146,6 +146,7 @@
 
 <script>
     let recognition;
+    let isRecognizing = false;
 
     window.onload = () => {
         const firstRow = document.querySelector('.row');
@@ -176,11 +177,8 @@
         const startButton = document.getElementById('startButton');
         const stopButton = document.getElementById('stopButton');
 
-        if (recognition) {
-            recognition.stop();
-            startButton.textContent = 'Start Voice Command';
-            startButton.classList.remove('active');
-            stopButton.style.display = 'none';
+        if (isRecognizing) {
+            stopVoiceCommand();
             return;
         }
 
@@ -193,24 +191,41 @@
         recognition.interimResults = false;
         recognition.maxAlternatives = 1;
         recognition.continuous = true;
+        isRecognizing = true;
 
         recognition.onresult = (event) => {
             const command = event.results[event.results.length - 1][0].transcript.toLowerCase();
             console.log('Recognized command:', command);
 
+            let commandRecognized = false;
+
             if (/select row (\d+)/.test(command)) {
                 const rowNumber = parseInt(command.match(/select row (\d+)/)[1]);
                 selectRowByNumber(rowNumber);
                 speakMessage(`Row ${rowNumber} selected.`);
+                commandRecognized = true;
             } else if (/jump to row (\d+)/.test(command)) {
                 const rowNumber = parseInt(command.match(/jump to row (\d+)/)[1]);
                 selectRowByNumber(rowNumber);
                 speakMessage(`Jumping to row ${rowNumber}.`);
+                commandRecognized = true;
             } else if (/copy source to target/.test(command)) {
                 copySourceToTarget();
-            } else {
-                speakMessage('Command not recognized. Please try again.');
+                commandRecognized = true;
             }
+
+            if (!commandRecognized) {
+                console.log("Unrecognized command, but no feedback given.");
+            }
+        };
+
+        recognition.onend = () => {
+            stopVoiceCommand();
+        };
+
+        recognition.onerror = (event) => {
+            console.error('Error:', event.error);
+            stopVoiceCommand();
         };
 
         recognition.start();
@@ -224,6 +239,7 @@
         if (recognition) {
             recognition.stop();
             recognition = null;
+            isRecognizing = false;
             startButton.textContent = 'Start Voice Command';
             startButton.classList.remove('active');
             stopButton.style.display = 'none';
