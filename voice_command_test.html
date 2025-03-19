@@ -66,9 +66,22 @@
             font-size: 16px;
             border-radius: 4px;
             transition: background-color 0.2s;
+            margin-right: 5px;
         }
         button:hover {
             background-color: #0056b3;
+        }
+        button.active {
+            background-color: #ffcc00;
+            color: #000;
+        }
+        button.stop {
+            background-color: #dc3545;
+            color: white;
+            display: none;
+        }
+        button.stop:hover {
+            background-color: #c82333;
         }
     </style>
 </head>
@@ -76,52 +89,64 @@
 
 <h2>Példatáblázat (div alapú) - Voice Command API-val</h2>
 
-<button onclick="startVoiceCommand()">Start Voice Command</button>
+<button id="startButton" onclick="startVoiceCommand()">Start Voice Command</button>
+<button id="stopButton" class="stop" aria-live="assertive" onclick="stopVoiceCommand()">Stop Voice Command</button>
 
 <div class="grid" role="grid" aria-label="Translation grid">
-    <div class="row" role="row" onclick="selectRow(this)">
+
+    <div class="row" role="row" aria-selected="false" onclick="selectRow(this)">
         <div class="cell number" role="gridcell">1</div>
-        <div class="cell description" role="gridcell">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        <div class="cell editable" contenteditable="true" role="gridcell"></div>
-    </div>
-    <div class="row" role="row" onclick="selectRow(this)">
-        <div class="cell number" role="gridcell">2</div>
-        <div class="cell description" role="gridcell">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-        <div class="cell editable" contenteditable="true" role="gridcell"></div>
-    </div>
-    <div class="row" role="row" onclick="selectRow(this)">
-        <div class="cell number" role="gridcell">3</div>
         <div class="cell description" role="gridcell">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</div>
-        <div class="cell editable" contenteditable="true" role="gridcell"></div>
+        <div class="cell editable" contenteditable="true" role="gridcell" aria-label="Editable target cell"></div>
     </div>
-    <div class="row" role="row" onclick="selectRow(this)">
-        <div class="cell number" role="gridcell">4</div>
-        <div class="cell description" role="gridcell">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</div>
-        <div class="cell editable" contenteditable="true" role="gridcell"></div>
-    </div>
-    <div class="row" role="row" onclick="selectRow(this)">
-        <div class="cell number" role="gridcell">5</div>
-        <div class="cell description" role="gridcell">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</div>
-        <div class="cell editable" contenteditable="true" role="gridcell"></div>
-    </div>
-    <div class="row" role="row" onclick="selectRow(this)">
-        <div class="cell number" role="gridcell">6</div>
-        <div class="cell description" role="gridcell">Deserunt mollit anim id est laborum.</div>
-        <div class="cell editable" contenteditable="true" role="gridcell"></div>
-    </div>
-    <div class="row" role="row" onclick="selectRow(this)">
-        <div class="cell number" role="gridcell">7</div>
+    
+    <div class="row" role="row" aria-selected="false" onclick="selectRow(this)">
+        <div class="cell number" role="gridcell">2</div>
         <div class="cell description" role="gridcell">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</div>
-        <div class="cell editable" contenteditable="true" role="gridcell"></div>
+        <div class="cell editable" contenteditable="true" role="gridcell" aria-label="Editable target cell"></div>
     </div>
-    <div class="row" role="row" onclick="selectRow(this)">
+    
+    <div class="row" role="row" aria-selected="false" onclick="selectRow(this)">
+        <div class="cell number" role="gridcell">3</div>
+        <div class="cell description" role="gridcell">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        <div class="cell editable" contenteditable="true" role="gridcell" aria-label="Editable target cell"></div>
+    </div>
+    
+    <div class="row" role="row" aria-selected="false" onclick="selectRow(this)">
+        <div class="cell number" role="gridcell">4</div>
+        <div class="cell description" role="gridcell">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</div>
+        <div class="cell editable" contenteditable="true" role="gridcell" aria-label="Editable target cell"></div>
+    </div>
+    
+    <div class="row" role="row" aria-selected="false" onclick="selectRow(this)">
+        <div class="cell number" role="gridcell">5</div>
+        <div class="cell description" role="gridcell">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <div class="cell editable" contenteditable="true" role="gridcell" aria-label="Editable target cell"></div>
+    </div>
+    
+    <div class="row" role="row" aria-selected="false" onclick="selectRow(this)">
+        <div class="cell number" role="gridcell">6</div>
+        <div class="cell description" role="gridcell">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</div>
+        <div class="cell editable" contenteditable="true" role="gridcell" aria-label="Editable target cell"></div>
+    </div>
+    
+    <div class="row" role="row" aria-selected="false" onclick="selectRow(this)">
+        <div class="cell number" role="gridcell">7</div>
+        <div class="cell description" role="gridcell">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</div>
+        <div class="cell editable" contenteditable="true" role="gridcell" aria-label="Editable target cell"></div>
+    </div>
+    
+    <div class="row" role="row" aria-selected="false" onclick="selectRow(this)">
         <div class="cell number" role="gridcell">8</div>
-        <div class="cell description" role="gridcell">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit.</div>
-        <div class="cell editable" contenteditable="true" role="gridcell"></div>
+        <div class="cell description" role="gridcell">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</div>
+        <div class="cell editable" contenteditable="true" role="gridcell" aria-label="Editable target cell"></div>
     </div>
+    
 </div>
 
 <script>
+    let recognition;
+
     window.onload = () => {
         const firstRow = document.querySelector('.row');
         if (firstRow) {
@@ -130,70 +155,102 @@
     };
 
     function selectRow(row) {
-        document.querySelectorAll('.row').forEach(r => r.classList.remove('selected'));
+        document.querySelectorAll('.row').forEach(r => {
+            r.classList.remove('selected');
+            r.setAttribute('aria-selected', 'false');
+        });
         row.classList.add('selected');
+        row.setAttribute('aria-selected', 'true');
         row.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 
     function speakMessage(message) {
-        const speech = new SpeechSynthesisUtterance(message);
-        speech.lang = 'en-US';
-        window.speechSynthesis.speak(speech);
+        if (!window.speechSynthesis.speaking) {
+            const speech = new SpeechSynthesisUtterance(message);
+            speech.lang = 'en-US';
+            window.speechSynthesis.speak(speech);
+        }
     }
 
     function startVoiceCommand() {
-        const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+        const startButton = document.getElementById('startButton');
+        const stopButton = document.getElementById('stopButton');
+
+        if (recognition) {
+            recognition.stop();
+            startButton.textContent = 'Start Voice Command';
+            startButton.classList.remove('active');
+            stopButton.style.display = 'none';
+            return;
+        }
+
+        startButton.textContent = 'Listening...';
+        startButton.classList.add('active');
+        stopButton.style.display = 'inline-block';
+
+        recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
         recognition.lang = 'en-US';
         recognition.interimResults = false;
         recognition.maxAlternatives = 1;
+        recognition.continuous = true;
 
         recognition.onresult = (event) => {
-            const command = event.results[0][0].transcript.toLowerCase();
+            const command = event.results[event.results.length - 1][0].transcript.toLowerCase();
             console.log('Recognized command:', command);
 
-            if (command.includes('select row')) {
-                const rowNumber = parseInt(command.replace('select row', '').trim());
+            if (/select row (\d+)/.test(command)) {
+                const rowNumber = parseInt(command.match(/select row (\d+)/)[1]);
                 selectRowByNumber(rowNumber);
                 speakMessage(`Row ${rowNumber} selected.`);
-            } else if (command.includes('jump to row')) {
-                const rowNumber = parseInt(command.replace('jump to row', '').trim());
+            } else if (/jump to row (\d+)/.test(command)) {
+                const rowNumber = parseInt(command.match(/jump to row (\d+)/)[1]);
                 selectRowByNumber(rowNumber);
                 speakMessage(`Jumping to row ${rowNumber}.`);
-            } else if (command.includes('copy source to target')) {
+            } else if (/copy source to target/.test(command)) {
                 copySourceToTarget();
             } else {
                 speakMessage('Command not recognized. Please try again.');
             }
         };
 
-        function selectRowByNumber(rowNumber) {
-            const row = document.querySelectorAll('.row')[rowNumber - 1];
-            if (row) {
-                selectRow(row);
-            } else {
-                speakMessage(`Row ${rowNumber} not found.`);
-            }
-        }
-
-        function copySourceToTarget() {
-            const selectedRow = document.querySelector('.row.selected');
-            if (selectedRow) {
-                const source = selectedRow.querySelector('.cell.description').textContent;
-                const target = selectedRow.querySelector('.cell.editable');
-                target.textContent = source;
-                speakMessage('Source copied to target.');
-            } else {
-                speakMessage('No row selected. Please select a row first.');
-            }
-        }
-
-        recognition.onerror = (event) => {
-            console.error('Error occurred in recognition:', event.error);
-            speakMessage('An error occurred during voice recognition.');
-        };
-
         recognition.start();
         speakMessage('Voice command started.');
+    }
+
+    function stopVoiceCommand() {
+        const startButton = document.getElementById('startButton');
+        const stopButton = document.getElementById('stopButton');
+
+        if (recognition) {
+            recognition.stop();
+            recognition = null;
+            startButton.textContent = 'Start Voice Command';
+            startButton.classList.remove('active');
+            stopButton.style.display = 'none';
+            speakMessage('Voice command stopped.');
+        }
+    }
+
+    function selectRowByNumber(rowNumber) {
+        const row = document.querySelectorAll('.row')[rowNumber - 1];
+        if (row) {
+            selectRow(row);
+        } else {
+            speakMessage(`Row ${rowNumber} not found.`);
+        }
+    }
+
+    function copySourceToTarget() {
+        const selectedRow = document.querySelector('.row.selected');
+        if (selectedRow) {
+            const source = selectedRow.querySelector('.cell.description').textContent;
+            const target = selectedRow.querySelector('.cell.editable');
+            target.textContent = source;
+            target.setAttribute('aria-label', 'Content copied from source');
+            speakMessage('Source copied to target.');
+        } else {
+            speakMessage('No row selected. Please select a row first.');
+        }
     }
 </script>
 
